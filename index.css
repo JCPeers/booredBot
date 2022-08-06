@@ -1,33 +1,28 @@
 body {
+    /* uigradients.com */
+    background: #bdc3c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #c6ffdd, #fbd786, #f7797d);
+ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-repeat: no-repeat;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Rubik', sans-serif;
-    padding: 0;
-    margin:0;
-    background: linear-gradient(#c6ffdd, #fbd786,#f7797d);
-    background-repeat: no-repeat;
-    height: 100vh;
-}
-
-h1 {
-    font-size: 3rem;
-}
-
-h4 {
-    font-size: 1.5rem;
-    font-weight: 400;
+    font-family: Oxygen, sans-serif;
 }
 
 button {
-    margin-top: 20px;
     height: 100px;
     width: 100px;
     border-radius: 50%;
-    background-color: #ff006e;
-    border: 2px solid #f14445;
-    cursor: grab;
+    background-color: red;
+    border: 1px solid darkred;
+    cursor: pointer;
 }
 
-
-
+.myStyle {
+    font-size: 1.5rem;
+    color: #f26419;
+    text-align: center;
+}

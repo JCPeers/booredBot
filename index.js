@@ -1,15 +1,24 @@
 /**
 Challenge: 
 
-- Add some styling! Be creative, play with layout a bit
-  (Spoiler: I'm going to use a single-column flexbox layout)
-  add some color, grab a font from Google fonts - whatever
-  you'd like!
+- Make the styling more exciting once an activity idea comes 
+back from the Bored API
+    - Resources: DOM element "classList" property, uigradients.com, 
+      Google Fonts, color.adobe.com
+    - Some ideas:
+      - Change the title from "BoredBot" to something more exciting!
+      - Change the background to something less drab.
+      - Bonus: Animate something on the screen to move around and add more 
+        excitement to the page
 */
 
-// fetch("https://apis.scrimba.com/bored/api/activity")
-//     .then(response => response.json())
-//     .then(data => {
-//         console.log(data)
-//         document.getElementById("activity-name").textContent = data.activity
-//     })
+document.getElementById("get-activity").addEventListener("click", function() {
+  fetch("https://apis.scrimba.com/bored/api/activity")
+    .then(response => response.json())
+    .then(data => {
+      const activity = document.getElementById("activity")
+      activity.textContent = data.activity
+      document.getElementById("title").textContent = "🦾  Mega Bot  🦿"
+      activity.classList.add("myStyle");
+    })
+})
